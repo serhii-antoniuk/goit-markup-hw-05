@@ -81,7 +81,11 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <button class="filter-button-hero current" type="button">
+          <button
+            class="filter-button-hero current"
+            type="button"
+            data-modal-open
+          >
             Заказать услугу
           </button>
         </div>
@@ -151,33 +155,42 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="works">
             <li class="works-item">
-              <img
-                src="./images/one.jpg"
-                alt="Человек работает за
+              <div class="works-overlay">
+                <img
+                  src="./images/one.jpg"
+                  alt="Человек работает за
                 компьютером"
-                width="370"
-                height="294"
-              />
+                  width="370"
+                  height="294"
+                />
+                <p class="works-item-text">Десктопные приложения</p>
+              </div>
             </li>
 
             <li class="works-item">
-              <img
-                src="./images/two.jpg"
-                alt="Человек работает за
+              <div class="works-overlay">
+                <img
+                  src="./images/two.jpg"
+                  alt="Человек работает за
                 ноутбуком"
-                width="370"
-                height="294"
-              />
+                  width="370"
+                  height="294"
+                />
+                <p class="works-item-text">Мобильные приложения</p>
+              </div>
             </li>
 
             <li class="works-item">
-              <img
-                src="./images/three.jpg"
-                alt="Человек работает за
+              <div class="works-overlay">
+                <img
+                  src="./images/three.jpg"
+                  alt="Человек работает за
                 планшетом"
-                width="370"
-                height="294"
-              />
+                  width="370"
+                  height="294"
+                />
+                <p class="works-item-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -194,6 +207,7 @@
                 width="270"
                 height="260"
               />
+
               <div class="team-members">
                 <h3 class="team-title">Игорь Демьяненко</h3>
                 <p class="team-description">Product Designer</p>
@@ -483,5 +497,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close type="button" class="btn-close">
+          <svg class="modal-btn-open" width="11" height="11">
+            <use href="./images/sprite.svg#icon-Vector"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
