@@ -250,12 +250,9 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  transition: opacity 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/*.features {
-  display: flex;
-}*/
 
 .section-features {
   padding-bottom: 0;
@@ -450,7 +447,9 @@ img {
   border: transparent;
   padding: 6px 22px;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter {
@@ -522,10 +521,13 @@ img {
   color: var(--secondary-title-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-item:hover .gallery-item-text {
+.gallery-link:focus .gallery-item-text,
+.gallery-link:hover .gallery-item-text {
   transform: translateY(0%);
 }
 
@@ -678,11 +680,9 @@ footer {
 .footer-item-socials {
   display: flex;
   margin-bottom: 20px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -735,7 +735,8 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  transition: opacity 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms, opacity 250ms,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-close {
